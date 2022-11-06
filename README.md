@@ -16,7 +16,8 @@
 - `legacy-system`
   - 레거시 시스템 브랜치는 기존에 사용하던 프로퍼티 및 빌드 관리 방식을 담고있는 브랜치로서, 
     기존 문제를 파악하고 원인을 분석하여 보완 솔루션을 찾기위한 목적을 갖고 있는 브랜치
-
+  - 아래 `@Documents` 링크는 해당 브랜치의 자세한 문서를 볼 수 있다.
+    - [@Documents :: legacy-system]("https://github.com/dlalstj0213/Study.SpringBoot.ProjectManagement/tree/legacy-system/docs/legacy-system")
 
 - `new-system-{number}.{version}`
   - 신규 시스템 브랜치는 기존 문제를 개선한 브랜치로서, 마스터 브랜치와 최종 머지될 브랜치

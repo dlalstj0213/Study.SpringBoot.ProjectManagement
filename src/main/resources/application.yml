@@ -1,2 +1,60 @@
-server:
-  port: 8090
+# 기본 환경
+spring:
+  profiles:
+    active:
+      - local  # 로컬 환경
+      - dev    # 개발 환경
+    #    - test   # 테스트 환경
+    #    - prod   # 운영 환경
+    include:
+      - external
+
+---
+# 공통 환경
+
+spring:
+  config:
+    activate:
+      on-profile: external
+    import:
+      - classpath:config/external.yml
+
+---
+# 로컬 환경
+
+spring:
+  config:
+    activate:
+      on-profile: local
+    import:
+      - classpath:config/local/application-local.yml
+
+---
+# 개발 환경
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+    import:
+      - classpath:config/dev/application-dev.yml
+
+---
+# 테스트 환경
+
+spring:
+  config:
+    activate:
+      on-profile: test
+    import:
+      - classpath:config/test/application-test.yml
+
+---
+# 운영 환경
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+    import:
+      - classpath:config/prod/application-prod.yml
